@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17171B"/><stop offset="1" stop-color="#040405"/>
+    </linearGradient>
+    <radialGradient id="ember" cx="512" cy="980" r="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF5B35" stop-opacity="0.85"/>
+      <stop offset="0.45" stop-color="#C2321A" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#C2321A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A2A31"/><stop offset="0.55" stop-color="#0D0D10"/><stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#FF7A55" stop-opacity="0.45"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="30"/></filter>
+    <path id="cowl" d="M300 812 C232 812 206 770 206 700 L214 478 C216 418 228 370 250 330 L300 132 L408 282 C446 275 478 288 512 306 C546 288 578 275 616 282 L724 132 L774 330 C796 370 808 418 810 478 L818 700 C818 770 792 812 724 812 Q512 842 300 812 Z"/>
+    <path id="eyeL" d="M316 520 C372 498 424 514 470 568 C418 594 352 588 316 520 Z"/>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#ember)"/>
+  <use href="#cowl" fill="#000" opacity="0.7" filter="url(#shadow)" transform="translate(0 30)"/>
+  <use href="#cowl" fill="url(#head)"/>
+  <use href="#cowl" fill="none" stroke="url(#rim)" stroke-width="5"/>
+  <g filter="url(#glow)" opacity="0.7">
+    <use href="#eyeL" fill="#FFFFFF"/><use href="#eyeL" fill="#FFFFFF" transform="matrix(-1 0 0 1 1024 0)"/>
+  </g>
+  <use href="#eyeL" fill="#FFFFFF"/><use href="#eyeL" fill="#FFFFFF" transform="matrix(-1 0 0 1 1024 0)"/>
+</svg>
